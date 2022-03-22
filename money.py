@@ -13,10 +13,11 @@ def weekly():
     
     hours = sunday + monday + tuesday + wednesday + thursday + friday + saturday 
 
-    flat_tax = 0.323
+    flat_tax = 0.0323
 
     weekly_paycheck = hours * wage
-    paycheck_aftertax = weekly_paycheck * flat_tax
+    paycheck_tax = weekly_paycheck * flat_tax
+    paycheck_aftertax = weekly_paycheck - paycheck_tax
 
     print("This Pay Period, you worked a total of ", hours, " hours. Before Tax, you should have made about $",weekly_paycheck, ". After tax, you should have made about $", paycheck_aftertax)
 
@@ -37,10 +38,11 @@ def biweekly():
   saturday2 = int(input("Enter Hours Worked for the second Saturday of this pay period: "))
   hours = sunday1 + monday1 + tuesday1 + wednesday1 + thursday1 + friday1 + saturday1 + sunday2 + monday2 + tuesday2 + wednesday2 + thursday2 + friday2 + saturday2
 
-  flat_tax = 0.323
+  flat_tax = 0.0323
 
   biweekly_paycheck = hours * wage
-  paycheck_aftertax = biweekly_paycheck * flat_tax
+  paycheck_tax = biweekly_paycheck * flat_tax
+  paycheck_aftertax = biweekly_paycheck - paycheck_tax
 
   print("This Pay Period, you worked a total of ", hours, " hours. Before Tax, you should have made about $",biweekly_paycheck, ". After tax, you should have made about $", paycheck_aftertax)
 
